@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="80" id="uDg-Xv-Fx2" userLabel="Pokemon Table View Cell" customClass="PokemonTableViewCell" customModule="Pokemon" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uDg-Xv-Fx2" id="gdh-jJ-juZ">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ljh-6C-Nc7">
+                        <rect key="frame" x="15" y="10" width="60" height="60"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Ljh-6C-Nc7" secondAttribute="height" multiplier="1:1" id="Ws0-z1-4Zo"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="30"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0l-PM-gkl">
+                        <rect key="frame" x="85" y="10" width="319" height="20"/>
+                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meta . Meta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CQ-5A-Tgj">
+                        <rect key="frame" x="85" y="40" width="319" height="17"/>
+                        <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="17"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ljh-6C-Nc7" firstAttribute="leading" secondItem="gdh-jJ-juZ" secondAttribute="leading" constant="15" id="C13-iV-q9n"/>
+                    <constraint firstAttribute="trailing" secondItem="m0l-PM-gkl" secondAttribute="trailing" constant="10" id="Eg4-ER-UAm"/>
+                    <constraint firstAttribute="bottom" secondItem="Ljh-6C-Nc7" secondAttribute="bottom" constant="10" id="RS2-5S-bK3"/>
+                    <constraint firstItem="7CQ-5A-Tgj" firstAttribute="trailing" secondItem="m0l-PM-gkl" secondAttribute="trailing" id="eDA-R6-Nal"/>
+                    <constraint firstItem="7CQ-5A-Tgj" firstAttribute="leading" secondItem="m0l-PM-gkl" secondAttribute="leading" id="grU-FX-oQ3"/>
+                    <constraint firstItem="m0l-PM-gkl" firstAttribute="leading" secondItem="Ljh-6C-Nc7" secondAttribute="trailing" constant="10" id="l6f-Zm-zDG"/>
+                    <constraint firstItem="Ljh-6C-Nc7" firstAttribute="top" secondItem="gdh-jJ-juZ" secondAttribute="top" constant="10" id="u3p-51-EnH"/>
+                    <constraint firstItem="7CQ-5A-Tgj" firstAttribute="top" secondItem="m0l-PM-gkl" secondAttribute="bottom" constant="10" id="uGe-2R-c4r"/>
+                    <constraint firstItem="m0l-PM-gkl" firstAttribute="top" secondItem="Ljh-6C-Nc7" secondAttribute="top" id="wZu-mu-brR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="m0l-PM-gkl" id="cSc-GG-V3U"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="169"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="logo" width="300" height="168"/>
+    </resources>
+</document>

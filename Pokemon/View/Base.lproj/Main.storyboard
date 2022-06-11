@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Um-OP-QRa">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="sdI-Cp-pQL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Um-OP-QRa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" shadowImage=" " largeTitles="YES" id="M6V-Kg-VBP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="24"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="24"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ewf-Xd-uoG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cO6-3q-LE6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
+        </scene>
+        <!--Hello World-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Pokemon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMN-nd-O0F">
+                                <rect key="frame" x="15" y="240" width="384" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hmM-vm-dSl"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Pokemon List">
+                                    <fontDescription key="titleFontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="9X9-PL-XVh" kind="show" id="R48-T1-mas"/>
+                                </connections>
+                            </button>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DWZ-mJ-y5V">
+                                <rect key="frame" x="0.0" y="305" width="414" height="591"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NfX-ov-ric">
+                                        <rect key="frame" x="132" y="15" width="150" height="10"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="OA3-Mg-e8e"/>
+                                            <constraint firstAttribute="height" constant="10" id="bug-bb-F0Q"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5Og-EU-lpg">
+                                        <rect key="frame" x="0.0" y="45" width="414" height="546"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="O2o-am-cO8">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="50" height="50"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="15" minY="15" maxX="15" maxY="44"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchBar" id="xaR-04-oLq" customClass="SearchBarView" customModule="Pokemon" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <searchBar clipsSubviews="YES" contentMode="redraw" searchBarStyle="minimal" placeholder="Search ..." translatesAutoresizingMaskIntoConstraints="NO" id="OBy-vT-sSg">
+                                                    <rect key="frame" x="5" y="0.0" width="404" height="50"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </searchBar>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OBy-vT-sSg" firstAttribute="top" secondItem="xaR-04-oLq" secondAttribute="top" id="3td-0C-aeP"/>
+                                                <constraint firstAttribute="trailing" secondItem="OBy-vT-sSg" secondAttribute="trailing" constant="5" id="Lyw-JV-sOt"/>
+                                                <constraint firstItem="OBy-vT-sSg" firstAttribute="leading" secondItem="xaR-04-oLq" secondAttribute="leading" constant="5" id="gMR-bT-jv6"/>
+                                                <constraint firstAttribute="bottom" secondItem="OBy-vT-sSg" secondAttribute="bottom" id="pcU-TL-4Fb"/>
+                                            </constraints>
+                                            <connections>
+                                                <outlet property="searchBar" destination="OBy-vT-sSg" id="3Tc-rM-m5o"/>
+                                            </connections>
+                                        </collectionReusableView>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="4zL-nB-533"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="gbL-3W-Dej"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5Og-EU-lpg" secondAttribute="trailing" id="8tB-BN-qE6"/>
+                                    <constraint firstItem="5Og-EU-lpg" firstAttribute="top" secondItem="NfX-ov-ric" secondAttribute="bottom" constant="20" id="GZB-uM-0kR"/>
+                                    <constraint firstItem="NfX-ov-ric" firstAttribute="top" secondItem="DWZ-mJ-y5V" secondAttribute="top" constant="15" id="VcY-Qh-UMC"/>
+                                    <constraint firstItem="NfX-ov-ric" firstAttribute="centerX" secondItem="DWZ-mJ-y5V" secondAttribute="centerX" id="YfF-a3-phI"/>
+                                    <constraint firstItem="5Og-EU-lpg" firstAttribute="leading" secondItem="DWZ-mJ-y5V" secondAttribute="leading" id="efe-hh-0J5"/>
+                                    <constraint firstAttribute="bottom" secondItem="5Og-EU-lpg" secondAttribute="bottom" id="m3f-v8-qRe"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusTop">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DWZ-mJ-y5V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="165" id="7Yw-xi-r2v"/>
+                            <constraint firstItem="DWZ-mJ-y5V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="89a-sL-6Z2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yMN-nd-O0F" secondAttribute="trailing" constant="15" id="HKB-Qq-aZg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DWZ-mJ-y5V" secondAttribute="trailing" id="IiU-vX-fHy"/>
+                            <constraint firstItem="yMN-nd-O0F" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="N6a-NZ-fPF"/>
+                            <constraint firstItem="yMN-nd-O0F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="OiA-2r-1yD"/>
+                            <constraint firstAttribute="bottom" secondItem="DWZ-mJ-y5V" secondAttribute="bottom" id="ene-aU-8DK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hello World" id="pc9-ws-5nX">
+                        <barButtonItem key="backBarButtonItem" title=" Pokemon List" id="Vah-Cd-NBD"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="SheetTopContraint" destination="7Yw-xi-r2v" id="hng-he-wgn"/>
+                        <outlet property="collectionView" destination="5Og-EU-lpg" id="Omp-2M-Sw5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="83.705357142857139"/>
+        </scene>
+        <!--Pokemon List View Controller-->
+        <scene sceneID="vyO-fJ-kIv">
+            <objects>
+                <viewController id="9X9-PL-XVh" customClass="PokemonListViewController" customModule="Pokemon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MD8-oH-OYl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" allowsMultipleSelection="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ky1-wT-ONr">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="Kx2-ao-Lxv">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="10"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="70l-86-j3R"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ky1-wT-ONr" firstAttribute="top" secondItem="70l-86-j3R" secondAttribute="top" id="0Qj-GG-icq"/>
+                            <constraint firstItem="Ky1-wT-ONr" firstAttribute="leading" secondItem="70l-86-j3R" secondAttribute="leading" id="LJv-GN-4RW"/>
+                            <constraint firstItem="70l-86-j3R" firstAttribute="trailing" secondItem="Ky1-wT-ONr" secondAttribute="trailing" id="M60-ta-k3c"/>
+                            <constraint firstItem="70l-86-j3R" firstAttribute="bottom" secondItem="Ky1-wT-ONr" secondAttribute="bottom" id="rnk-1t-NzX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="7N3-3y-Ujw">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="yrb-jW-Lxn">
+                                <color key="tintColor" name="AccentColor"/>
+                                <connections>
+                                    <action selector="AddTapped:" destination="9X9-PL-XVh" id="UpQ-7r-Bth"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="save" id="Qh0-Xs-jsv">
+                                <color key="tintColor" name="AccentColor"/>
+                                <connections>
+                                    <action selector="SaveTapped:" destination="9X9-PL-XVh" id="fNk-1Y-aEk"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Ky1-wT-ONr" id="bxh-Ix-86z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tuH-oh-eU1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722" y="77"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name=" " width="128" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="0.27700001001358032" green="0.89399999380111694" blue="0.75999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
