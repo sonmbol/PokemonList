@@ -4,6 +4,6 @@ The code structure is MVVM
 
 
 ### UI Design
-![](http://github.com/sonmbol/PokemonList/BeFunky-collage)  
+![](https://github.com/sonmbol/PokemonList/blob/master/BeFunky-collage.png)  
 
 
